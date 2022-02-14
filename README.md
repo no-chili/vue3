@@ -79,3 +79,37 @@ v-slot 可以简写成 #
 <MyComponent>
 ```
 
+##  可组合函数
+
+hooks
+
+命名 fetch.ts
+
+```
+export function useFetch(){
+	
+	//fetch数据等等操作
+	//可写生命周期钩子
+	
+	return {data,error}
+}
+```
+
+对比mixin优点：
+
+* 清楚属性来源
+* 命名不容易冲突（方便重命名）
+* 返回值可以作为参数传入另一个可组合函数
+
+## 自定义指令
+
+```
+// 在模板中注册 v-focus
+const vFocus = {
+  mounted: (el) => el.focus()
+}
+
+//使用
+ <input v-focus />
+```
+
