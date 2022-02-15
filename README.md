@@ -113,3 +113,27 @@ const vFocus = {
  <input v-focus />
 ```
 
+## 插件
+
+插件是一个有install方法的对象，在app.use()时自动调用，接收app和options参数
+
+插件能做什么？
+
+* 注册组件和自定义方法
+* 可以注入资源到全局
+* 在实例上绑定属性和方法
+
+## 几个内置组件
+
+```
+Transition 过渡组件
+
+TransitionGroup 过渡组件（列表）
+
+KeepAlive 保持组件活跃，切换显示不被重置
+
+Teleport 传送门组件，传送组件内容到页面某一位置
+
+Suspense 异步组件
+```
+
